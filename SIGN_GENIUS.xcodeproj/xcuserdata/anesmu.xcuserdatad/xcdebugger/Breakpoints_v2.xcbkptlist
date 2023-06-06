@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1650ED03-A4F1-4A07-AEDB-6037666F7CEC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DECE28CB-A883-4C29-AA95-DA70316159EE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SIGN_GENIUS/View/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "visionRequestDidComplete(request:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DECE28CB-A883-4C29-AA95-DA70316159EE - afc46ce280902ade"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in SIGN_GENIUS.MainViewController.visionRequestDidComplete(request: __C.VNRequest, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "DECE28CB-A883-4C29-AA95-DA70316159EE - cbb294de8e5e1c6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SIGN_GENIUS.MainViewController.visionRequestDidComplete(request: __C.VNRequest, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "DECE28CB-A883-4C29-AA95-DA70316159EE - afc46ce280902ab1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in SIGN_GENIUS.MainViewController.visionRequestDidComplete(request: __C.VNRequest, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "124"
+                  endingLineNumber = "124"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "DECE28CB-A883-4C29-AA95-DA70316159EE - cbb294de8e5e1c6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SIGN_GENIUS.MainViewController.visionRequestDidComplete(request: __C.VNRequest, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "888">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F8F175B-6B6C-41D8-A8D1-C2B7B13E3745"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SIGN_GENIUS/View/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "visionRequestDidComplete(request:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F8F175B-6B6C-41D8-A8D1-C2B7B13E3745 - cbb294de8e5e1f8d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SIGN_GENIUS.MainViewController.visionRequestDidComplete(request: __C.VNRequest, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "120"
+                  endingLineNumber = "120"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "8F8F175B-6B6C-41D8-A8D1-C2B7B13E3745 - cbb294de8e5e1fea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SIGN_GENIUS.MainViewController.visionRequestDidComplete(request: __C.VNRequest, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "8F8F175B-6B6C-41D8-A8D1-C2B7B13E3745 - cbb294de8e5e1fea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SIGN_GENIUS.MainViewController.visionRequestDidComplete(request: __C.VNRequest, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/View/MainViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "119"
+                  endingLineNumber = "119"
+                  offsetFromSymbolStart = "544">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

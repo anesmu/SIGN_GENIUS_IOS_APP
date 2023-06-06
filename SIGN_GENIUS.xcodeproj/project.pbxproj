@@ -7,58 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		509924A229BDF2ED003D49F7 /* SIGN_GENIUSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924A129BDF2ED003D49F7 /* SIGN_GENIUSApp.swift */; };
-		509924A429BDF2ED003D49F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924A329BDF2ED003D49F7 /* ContentView.swift */; };
+		500711442A2D2FD200CFF63B /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500711432A2D2FD200CFF63B /* DrawingBoundingBoxView.swift */; };
+		503E23122A140DA6000A4F67 /* handDectection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 503E23102A140DA6000A4F67 /* handDectection.mlmodel */; };
+		503E23132A140DA6000A4F67 /* handClasification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 503E23112A140DA6000A4F67 /* handClasification.mlmodel */; };
+		507B05AD2A1009610089188D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B05AC2A1009610089188D /* SplashView.swift */; };
+		507B05B02A1009B40089188D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B05AF2A1009B40089188D /* SwiftUIView.swift */; };
+		508114392A2D0084003E3F07 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508114382A2D0084003E3F07 /* MainViewController.swift */; };
+		5081143C2A2D01CD003E3F07 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5081143A2A2D01CD003E3F07 /* MainViewController.storyboard */; };
+		5096603F2A101308001D85D3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5096603E2A101308001D85D3 /* AppState.swift */; };
+		509660412A101325001D85D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660402A101325001D85D3 /* User.swift */; };
+		509660442A10139F001D85D3 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660432A10139F001D85D3 /* AuthAPI.swift */; };
+		509660462A1013AF001D85D3 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660452A1013AF001D85D3 /* AuthService.swift */; };
+		509660482A10145E001D85D3 /* StatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660472A10145E001D85D3 /* StatusViewModel.swift */; };
+		5096604A2A10147F001D85D3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660492A10147F001D85D3 /* SignUpViewModel.swift */; };
+		5096604C2A101491001D85D3 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5096604B2A101491001D85D3 /* SignInViewModel.swift */; };
+		5096604F2A1015F7001D85D3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5096604E2A1015F7001D85D3 /* Preview Assets.xcassets */; };
+		509660512A101704001D85D3 /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660502A101704001D85D3 /* UIColorExt.swift */; };
+		509660542A101B99001D85D3 /* CustomModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660532A101B99001D85D3 /* CustomModifier.swift */; };
+		509660562A101BAE001D85D3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660552A101BAE001D85D3 /* CustomTextField.swift */; };
+		509660582A10ED48001D85D3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660572A10ED48001D85D3 /* WelcomeView.swift */; };
+		5096605B2A10F00B001D85D3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5096605D2A10F00B001D85D3 /* Localizable.strings */; };
+		509660632A110270001D85D3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660622A110270001D85D3 /* SignUpView.swift */; };
+		509660652A1102A6001D85D3 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660642A1102A6001D85D3 /* Login.swift */; };
+		509660672A1102E0001D85D3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660662A1102E0001D85D3 /* MainView.swift */; };
+		509924A229BDF2ED003D49F7 /* SignGeniusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924A129BDF2ED003D49F7 /* SignGeniusApp.swift */; };
 		509924A629BDF2EE003D49F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509924A529BDF2EE003D49F7 /* Assets.xcassets */; };
-		509924A929BDF2EE003D49F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 509924A829BDF2EE003D49F7 /* Preview Assets.xcassets */; };
-		509924B329BDF2EE003D49F7 /* SIGN_GENIUSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924B229BDF2EE003D49F7 /* SIGN_GENIUSTests.swift */; };
-		509924BD29BDF2EE003D49F7 /* SIGN_GENIUSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924BC29BDF2EE003D49F7 /* SIGN_GENIUSUITests.swift */; };
-		509924BF29BDF2EE003D49F7 /* SIGN_GENIUSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924BE29BDF2EE003D49F7 /* SIGN_GENIUSUITestsLaunchTests.swift */; };
 		509924CC29BDFF8B003D49F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 509924CB29BDFF8B003D49F7 /* GoogleService-Info.plist */; };
 		509924CF29BE0089003D49F7 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 509924CE29BE0089003D49F7 /* FirebaseAnalytics */; };
 		509924D129BE008A003D49F7 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 509924D029BE0089003D49F7 /* FirebaseAnalyticsSwift */; };
 		509924D329BE008A003D49F7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 509924D229BE008A003D49F7 /* FirebaseAuth */; };
 		509924D529BE008A003D49F7 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 509924D429BE008A003D49F7 /* FirebaseCrashlytics */; };
 		509924D729BE008A003D49F7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 509924D629BE008A003D49F7 /* FirebaseFirestore */; };
-		509924DB29BE1BBB003D49F7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924DA29BE1BBB003D49F7 /* ListView.swift */; };
-		509924DD29BE1BF2003D49F7 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924DC29BE1BF1003D49F7 /* Dog.swift */; };
-		509924DF29BE1DA8003D49F7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924DE29BE1DA8003D49F7 /* DataManager.swift */; };
-		509924E129BE21EB003D49F7 /* NewDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509924E029BE21EB003D49F7 /* NewDogView.swift */; };
+		50D58CC129CDFF0F00755B12 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D58CC029CDFF0F00755B12 /* VideoCapture.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		509924AF29BDF2EE003D49F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5099249629BDF2ED003D49F7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5099249D29BDF2ED003D49F7;
-			remoteInfo = SIGN_GENIUS;
-		};
-		509924B929BDF2EE003D49F7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5099249629BDF2ED003D49F7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5099249D29BDF2ED003D49F7;
-			remoteInfo = SIGN_GENIUS;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		500711432A2D2FD200CFF63B /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+		503E23102A140DA6000A4F67 /* handDectection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = handDectection.mlmodel; sourceTree = "<group>"; };
+		503E23112A140DA6000A4F67 /* handClasification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = handClasification.mlmodel; sourceTree = "<group>"; };
+		507B05AC2A1009610089188D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		507B05AF2A1009B40089188D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		508114382A2D0084003E3F07 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5081143B2A2D01CD003E3F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Pro_recognizer/ObjectDetection-CoreML/Base.lproj/MainViewController.storyboard"; sourceTree = "<group>"; };
+		5096603E2A101308001D85D3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		509660402A101325001D85D3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		509660432A10139F001D85D3 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		509660452A1013AF001D85D3 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		509660472A10145E001D85D3 /* StatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModel.swift; sourceTree = "<group>"; };
+		509660492A10147F001D85D3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		5096604B2A101491001D85D3 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		5096604E2A1015F7001D85D3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		509660502A101704001D85D3 /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		509660532A101B99001D85D3 /* CustomModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifier.swift; sourceTree = "<group>"; };
+		509660552A101BAE001D85D3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		509660572A10ED48001D85D3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		5096605C2A10F00B001D85D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5096605F2A10FAAE001D85D3 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		509660622A110270001D85D3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		509660642A1102A6001D85D3 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		509660662A1102E0001D85D3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		5096606A2A110945001D85D3 /* SIGN-GENIUS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SIGN-GENIUS-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5099249E29BDF2ED003D49F7 /* SIGN_GENIUS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIGN_GENIUS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		509924A129BDF2ED003D49F7 /* SIGN_GENIUSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGN_GENIUSApp.swift; sourceTree = "<group>"; };
-		509924A329BDF2ED003D49F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		509924A129BDF2ED003D49F7 /* SignGeniusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignGeniusApp.swift; sourceTree = "<group>"; };
 		509924A529BDF2EE003D49F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		509924A829BDF2EE003D49F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		509924AE29BDF2EE003D49F7 /* SIGN_GENIUSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIGN_GENIUSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		509924B229BDF2EE003D49F7 /* SIGN_GENIUSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGN_GENIUSTests.swift; sourceTree = "<group>"; };
-		509924B829BDF2EE003D49F7 /* SIGN_GENIUSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIGN_GENIUSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		509924BC29BDF2EE003D49F7 /* SIGN_GENIUSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGN_GENIUSUITests.swift; sourceTree = "<group>"; };
-		509924BE29BDF2EE003D49F7 /* SIGN_GENIUSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIGN_GENIUSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		509924CB29BDFF8B003D49F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		509924DA29BE1BBB003D49F7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		509924DC29BE1BF1003D49F7 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
-		509924DE29BE1DA8003D49F7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		509924E029BE21EB003D49F7 /* NewDogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDogView.swift; sourceTree = "<group>"; };
+		50D58CC029CDFF0F00755B12 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,29 +87,92 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		509924AB29BDF2EE003D49F7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509924B529BDF2EE003D49F7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		504FDECE29F9B99F00DD7E99 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				509660472A10145E001D85D3 /* StatusViewModel.swift */,
+				509660492A10147F001D85D3 /* SignUpViewModel.swift */,
+				5096604B2A101491001D85D3 /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		504FDECF29F9B9B300DD7E99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				507B05AC2A1009610089188D /* SplashView.swift */,
+				509660572A10ED48001D85D3 /* WelcomeView.swift */,
+				509660622A110270001D85D3 /* SignUpView.swift */,
+				509660642A1102A6001D85D3 /* Login.swift */,
+				509660662A1102E0001D85D3 /* MainView.swift */,
+				508114382A2D0084003E3F07 /* MainViewController.swift */,
+				5081143A2A2D01CD003E3F07 /* MainViewController.storyboard */,
+				500711432A2D2FD200CFF63B /* DrawingBoundingBoxView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		504FDED029F9B9C300DD7E99 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				509660402A101325001D85D3 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		504FDED129F9B9DA00DD7E99 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				507B05AF2A1009B40089188D /* SwiftUIView.swift */,
+				5096603E2A101308001D85D3 /* AppState.swift */,
+				509660502A101704001D85D3 /* UIColorExt.swift */,
+				5096605D2A10F00B001D85D3 /* Localizable.strings */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		504FDED329F9BA2F00DD7E99 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				509924A129BDF2ED003D49F7 /* SignGeniusApp.swift */,
+				509924CB29BDFF8B003D49F7 /* GoogleService-Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		509660422A10135D001D85D3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				509660432A10139F001D85D3 /* AuthAPI.swift */,
+				509660452A1013AF001D85D3 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5096604D2A1015BD001D85D3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5096604E2A1015F7001D85D3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		509660522A101B68001D85D3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				509660532A101B99001D85D3 /* CustomModifier.swift */,
+				509660552A101BAE001D85D3 /* CustomTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		5099249529BDF2ED003D49F7 = {
 			isa = PBXGroup;
 			children = (
 				509924A029BDF2ED003D49F7 /* SIGN_GENIUS */,
-				509924B129BDF2EE003D49F7 /* SIGN_GENIUSTests */,
-				509924BB29BDF2EE003D49F7 /* SIGN_GENIUSUITests */,
 				5099249F29BDF2ED003D49F7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,8 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				5099249E29BDF2ED003D49F7 /* SIGN_GENIUS.app */,
-				509924AE29BDF2EE003D49F7 /* SIGN_GENIUSTests.xctest */,
-				509924B829BDF2EE003D49F7 /* SIGN_GENIUSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,42 +188,37 @@
 		509924A029BDF2ED003D49F7 /* SIGN_GENIUS */ = {
 			isa = PBXGroup;
 			children = (
-				509924CB29BDFF8B003D49F7 /* GoogleService-Info.plist */,
-				509924A129BDF2ED003D49F7 /* SIGN_GENIUSApp.swift */,
-				509924A329BDF2ED003D49F7 /* ContentView.swift */,
-				509924DA29BE1BBB003D49F7 /* ListView.swift */,
-				509924DC29BE1BF1003D49F7 /* Dog.swift */,
-				509924E029BE21EB003D49F7 /* NewDogView.swift */,
-				509924DE29BE1DA8003D49F7 /* DataManager.swift */,
+				5096606A2A110945001D85D3 /* SIGN-GENIUS-Info.plist */,
+				509660522A101B68001D85D3 /* Components */,
+				5096604D2A1015BD001D85D3 /* Preview Content */,
+				504FDED329F9BA2F00DD7E99 /* App */,
+				504FDED129F9B9DA00DD7E99 /* Configuration */,
+				509660422A10135D001D85D3 /* Service */,
+				504FDED029F9B9C300DD7E99 /* Model */,
+				504FDECF29F9B9B300DD7E99 /* View */,
+				504FDECE29F9B99F00DD7E99 /* ViewModel */,
+				50D58CBF29CDFEFA00755B12 /* Utils */,
+				50D58CBE29CDFED900755B12 /* mlmodel */,
 				509924A529BDF2EE003D49F7 /* Assets.xcassets */,
-				509924A729BDF2EE003D49F7 /* Preview Content */,
 			);
 			path = SIGN_GENIUS;
 			sourceTree = "<group>";
 		};
-		509924A729BDF2EE003D49F7 /* Preview Content */ = {
+		50D58CBE29CDFED900755B12 /* mlmodel */ = {
 			isa = PBXGroup;
 			children = (
-				509924A829BDF2EE003D49F7 /* Preview Assets.xcassets */,
+				503E23112A140DA6000A4F67 /* handClasification.mlmodel */,
+				503E23102A140DA6000A4F67 /* handDectection.mlmodel */,
 			);
-			path = "Preview Content";
+			path = mlmodel;
 			sourceTree = "<group>";
 		};
-		509924B129BDF2EE003D49F7 /* SIGN_GENIUSTests */ = {
+		50D58CBF29CDFEFA00755B12 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				509924B229BDF2EE003D49F7 /* SIGN_GENIUSTests.swift */,
+				50D58CC029CDFF0F00755B12 /* VideoCapture.swift */,
 			);
-			path = SIGN_GENIUSTests;
-			sourceTree = "<group>";
-		};
-		509924BB29BDF2EE003D49F7 /* SIGN_GENIUSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				509924BC29BDF2EE003D49F7 /* SIGN_GENIUSUITests.swift */,
-				509924BE29BDF2EE003D49F7 /* SIGN_GENIUSUITestsLaunchTests.swift */,
-			);
-			path = SIGN_GENIUSUITests;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,42 +248,6 @@
 			productReference = 5099249E29BDF2ED003D49F7 /* SIGN_GENIUS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		509924AD29BDF2EE003D49F7 /* SIGN_GENIUSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 509924C529BDF2EE003D49F7 /* Build configuration list for PBXNativeTarget "SIGN_GENIUSTests" */;
-			buildPhases = (
-				509924AA29BDF2EE003D49F7 /* Sources */,
-				509924AB29BDF2EE003D49F7 /* Frameworks */,
-				509924AC29BDF2EE003D49F7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				509924B029BDF2EE003D49F7 /* PBXTargetDependency */,
-			);
-			name = SIGN_GENIUSTests;
-			productName = SIGN_GENIUSTests;
-			productReference = 509924AE29BDF2EE003D49F7 /* SIGN_GENIUSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		509924B729BDF2EE003D49F7 /* SIGN_GENIUSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 509924C829BDF2EE003D49F7 /* Build configuration list for PBXNativeTarget "SIGN_GENIUSUITests" */;
-			buildPhases = (
-				509924B429BDF2EE003D49F7 /* Sources */,
-				509924B529BDF2EE003D49F7 /* Frameworks */,
-				509924B629BDF2EE003D49F7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				509924BA29BDF2EE003D49F7 /* PBXTargetDependency */,
-			);
-			name = SIGN_GENIUSUITests;
-			productName = SIGN_GENIUSUITests;
-			productReference = 509924B829BDF2EE003D49F7 /* SIGN_GENIUSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -228,14 +261,6 @@
 					5099249D29BDF2ED003D49F7 = {
 						CreatedOnToolsVersion = 14.2;
 					};
-					509924AD29BDF2EE003D49F7 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 5099249D29BDF2ED003D49F7;
-					};
-					509924B729BDF2EE003D49F7 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 5099249D29BDF2ED003D49F7;
-					};
 				};
 			};
 			buildConfigurationList = 5099249929BDF2ED003D49F7 /* Build configuration list for PBXProject "SIGN_GENIUS" */;
@@ -244,6 +269,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 				Base,
 			);
 			mainGroup = 5099249529BDF2ED003D49F7;
@@ -255,8 +281,6 @@
 			projectRoot = "";
 			targets = (
 				5099249D29BDF2ED003D49F7 /* SIGN_GENIUS */,
-				509924AD29BDF2EE003D49F7 /* SIGN_GENIUSTests */,
-				509924B729BDF2EE003D49F7 /* SIGN_GENIUSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -266,23 +290,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				509924A929BDF2EE003D49F7 /* Preview Assets.xcassets in Resources */,
 				509924A629BDF2EE003D49F7 /* Assets.xcassets in Resources */,
+				5081143C2A2D01CD003E3F07 /* MainViewController.storyboard in Resources */,
+				5096605B2A10F00B001D85D3 /* Localizable.strings in Resources */,
+				5096604F2A1015F7001D85D3 /* Preview Assets.xcassets in Resources */,
 				509924CC29BDFF8B003D49F7 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509924AC29BDF2EE003D49F7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509924B629BDF2EE003D49F7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,52 +305,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				509924E129BE21EB003D49F7 /* NewDogView.swift in Sources */,
-				509924A429BDF2ED003D49F7 /* ContentView.swift in Sources */,
-				509924DF29BE1DA8003D49F7 /* DataManager.swift in Sources */,
-				509924A229BDF2ED003D49F7 /* SIGN_GENIUSApp.swift in Sources */,
-				509924DD29BE1BF2003D49F7 /* Dog.swift in Sources */,
-				509924DB29BE1BBB003D49F7 /* ListView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509924AA29BDF2EE003D49F7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				509924B329BDF2EE003D49F7 /* SIGN_GENIUSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		509924B429BDF2EE003D49F7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				509924BF29BDF2EE003D49F7 /* SIGN_GENIUSUITestsLaunchTests.swift in Sources */,
-				509924BD29BDF2EE003D49F7 /* SIGN_GENIUSUITests.swift in Sources */,
+				509660482A10145E001D85D3 /* StatusViewModel.swift in Sources */,
+				509660442A10139F001D85D3 /* AuthAPI.swift in Sources */,
+				500711442A2D2FD200CFF63B /* DrawingBoundingBoxView.swift in Sources */,
+				503E23132A140DA6000A4F67 /* handClasification.mlmodel in Sources */,
+				5096604C2A101491001D85D3 /* SignInViewModel.swift in Sources */,
+				509660632A110270001D85D3 /* SignUpView.swift in Sources */,
+				507B05AD2A1009610089188D /* SplashView.swift in Sources */,
+				5096604A2A10147F001D85D3 /* SignUpViewModel.swift in Sources */,
+				507B05B02A1009B40089188D /* SwiftUIView.swift in Sources */,
+				509660652A1102A6001D85D3 /* Login.swift in Sources */,
+				509660542A101B99001D85D3 /* CustomModifier.swift in Sources */,
+				50D58CC129CDFF0F00755B12 /* VideoCapture.swift in Sources */,
+				503E23122A140DA6000A4F67 /* handDectection.mlmodel in Sources */,
+				509660582A10ED48001D85D3 /* WelcomeView.swift in Sources */,
+				509660412A101325001D85D3 /* User.swift in Sources */,
+				509660672A1102E0001D85D3 /* MainView.swift in Sources */,
+				509660562A101BAE001D85D3 /* CustomTextField.swift in Sources */,
+				509924A229BDF2ED003D49F7 /* SignGeniusApp.swift in Sources */,
+				509660512A101704001D85D3 /* UIColorExt.swift in Sources */,
+				508114392A2D0084003E3F07 /* MainViewController.swift in Sources */,
+				5096603F2A101308001D85D3 /* AppState.swift in Sources */,
+				509660462A1013AF001D85D3 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		509924B029BDF2EE003D49F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5099249D29BDF2ED003D49F7 /* SIGN_GENIUS */;
-			targetProxy = 509924AF29BDF2EE003D49F7 /* PBXContainerItemProxy */;
+/* Begin PBXVariantGroup section */
+		5081143A2A2D01CD003E3F07 /* MainViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5081143B2A2D01CD003E3F07 /* Base */,
+			);
+			name = MainViewController.storyboard;
+			sourceTree = "<group>";
 		};
-		509924BA29BDF2EE003D49F7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5099249D29BDF2ED003D49F7 /* SIGN_GENIUS */;
-			targetProxy = 509924B929BDF2EE003D49F7 /* PBXContainerItemProxy */;
+		5096605D2A10F00B001D85D3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5096605C2A10F00B001D85D3 /* en */,
+				5096605F2A10FAAE001D85D3 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
 		};
-/* End PBXTargetDependency section */
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		509924C029BDF2EE003D49F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -399,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -454,16 +474,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SIGN_GENIUS/Preview Content\"";
 				DEVELOPMENT_TEAM = R7GWR83FG9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Sign genius";
+				INFOPLIST_FILE = "SIGN-GENIUS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sign Genius";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,6 +495,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sign-genius.SIGN-GENIUS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -484,16 +509,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SIGN_GENIUS/Preview Content\"";
 				DEVELOPMENT_TEAM = R7GWR83FG9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Sign genius";
+				INFOPLIST_FILE = "SIGN-GENIUS-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Sign Genius";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashView;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -503,85 +530,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sign-genius.SIGN-GENIUS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		509924C629BDF2EE003D49F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R7GWR83FG9;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sign-genius.SIGN-GENIUSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIGN_GENIUS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SIGN_GENIUS";
-			};
-			name = Debug;
-		};
-		509924C729BDF2EE003D49F7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R7GWR83FG9;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sign-genius.SIGN-GENIUSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SIGN_GENIUS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SIGN_GENIUS";
-			};
-			name = Release;
-		};
-		509924C929BDF2EE003D49F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R7GWR83FG9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sign-genius.SIGN-GENIUSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SIGN_GENIUS;
-			};
-			name = Debug;
-		};
-		509924CA29BDF2EE003D49F7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = R7GWR83FG9;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sign-genius.SIGN-GENIUSUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SIGN_GENIUS;
 			};
 			name = Release;
 		};
@@ -602,24 +556,6 @@
 			buildConfigurations = (
 				509924C329BDF2EE003D49F7 /* Debug */,
 				509924C429BDF2EE003D49F7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		509924C529BDF2EE003D49F7 /* Build configuration list for PBXNativeTarget "SIGN_GENIUSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				509924C629BDF2EE003D49F7 /* Debug */,
-				509924C729BDF2EE003D49F7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		509924C829BDF2EE003D49F7 /* Build configuration list for PBXNativeTarget "SIGN_GENIUSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				509924C929BDF2EE003D49F7 /* Debug */,
-				509924CA29BDF2EE003D49F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
