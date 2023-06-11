@@ -29,6 +29,13 @@ public class VideoCapture: NSObject {
     func setUpCamera(sessionPreset: AVCaptureSession.Preset, completion: @escaping (_ success: Bool) -> Void) {
         
         captureSession.beginConfiguration()
+        
+        let currentInputs = captureSession.inputs
+        for input in currentInputs {
+            captureSession.removeInput(input)
+        }
+        
+        
         captureSession.sessionPreset = sessionPreset
         
         guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera,
@@ -67,8 +74,6 @@ public class VideoCapture: NSObject {
             captureSession.addOutput(videoOutput)
         }
         
-        // We want the buffers to be in portrait orientation otherwise they are
-        // rotated by 90 degrees. Need to set this _after_ addOutput()!
         videoOutput.connection(with: AVMediaType.video)?.videoOrientation = .portrait
         
         captureSession.commitConfiguration()
@@ -89,12 +94,11 @@ public class VideoCapture: NSObject {
         }
     }
     
-    public func switchCamera() {
+    public func switchCamera( completion: @escaping (Bool) -> Void) {
+        self.stop()
         cameraPosition = (cameraPosition == .front) ? .back : .front
         setUp(sessionPreset: captureSession.sessionPreset) { success in
-            if !success {
-                print("Error switching camera")
-            }
+            completion(success)
         }
     }
 }

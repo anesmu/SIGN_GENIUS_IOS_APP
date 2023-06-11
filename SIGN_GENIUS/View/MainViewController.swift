@@ -12,6 +12,16 @@ class MainViewController: UIViewController {
     {
         didSet {
             logoutButton.titleLabel?.font = UIConfiguration.buttonFont
+            logoutButton.layer.borderWidth = 1
+            logoutButton.layer.borderColor = UIColor.black.cgColor
+            logoutButton.layer.cornerRadius = logoutButton.frame.height / 2
+            logoutButton.clipsToBounds = true
+        }
+    }
+    @IBOutlet weak var changeCamera: UIButton!
+    {
+        didSet {
+            changeCamera.titleLabel?.font = UIConfiguration.buttonFont
         }
     }
     lazy var handDectectionModel = { return try? handDectection() }()
@@ -106,6 +116,22 @@ class MainViewController: UIViewController {
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
         logoutAction?()
+    }
+    @IBAction func changeCamera(_ sender: Any) {
+        self.videoPreview.layer.removeAllAnimations()
+        speechSynthesizer.stopSpeaking(at: AVSpeechBoundary.immediate)
+        self.videoCapture.stop()
+        self.videoCapture.switchCamera(){ success in
+            
+            if success {
+                if let previewLayer = self.videoCapture.previewLayer {
+                    self.videoPreview.layer.addSublayer(previewLayer)
+                    self.resizePreviewLayer()
+                }
+                
+                self.videoCapture.start()
+            }
+        }
     }
 }
 
