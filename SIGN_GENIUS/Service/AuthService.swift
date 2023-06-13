@@ -3,23 +3,6 @@ import Combine
 import FirebaseAuth
 
 class AuthService: AuthAPI {
-    static let shared = AuthService()
-
-    func addListener() -> Future<User?, Never> {
-        return Future<User?, Never> { promise in
-            Auth.auth().addStateDidChangeListener {(auth, firebaseUser) in
-                guard let firebaseUser = firebaseUser else {
-                    promise(.success(nil))
-                    return
-                }
-                let id = firebaseUser.uid
-                let email = firebaseUser.email ?? ""
-                let user = User(id: id, email: email)
-                promise(.success(user))
-            }
-        }
-    }
-    
     func login(email: String, password: String) -> Future<User?, Never> {
         return Future<User?, Never> { promise in
             Auth.auth().signIn(withEmail: email, password: password) {(authResult, _) in
@@ -47,4 +30,10 @@ class AuthService: AuthAPI {
             }
         }
     }
+    
+    func resetPassword(email: String, completion: @escaping (Error?) -> Void) {
+         Auth.auth().sendPasswordReset(withEmail: email) { error in
+             completion(error)
+         }
+     }
 }

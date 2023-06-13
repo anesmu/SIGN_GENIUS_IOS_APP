@@ -7,7 +7,7 @@ struct Login: View {
     @ObservedObject private var viewModel: SignInViewModel
     
     init(state: AppState) {
-        self.viewModel = SignInViewModel(authAPI: AuthService.shared, state: state)
+        self.viewModel = SignInViewModel(authAPI: AuthService(), state: state)
     }
     
     var body: some View {
@@ -19,22 +19,22 @@ struct Login: View {
             }.hidden()
             VStack(alignment: .leading, spacing: 10) {
                 Spacer().frame(maxHeight: 30)
-                Text("Log in")
+                Text("LoginTitle")
                     .modifier(TextModifier(font: UIConfiguration.titleFont,
                                            color: UIConfiguration.tintColor))
                     .padding(.leading, 25)
                     .padding(.bottom, 80)
                 VStack(alignment: .center, spacing: 30) {
                     VStack(alignment: .center, spacing: 25) {
-                        CustomTextField(placeHolderText: "E-mail",
+                        CustomTextField(placeHolderText: NSLocalizedString("LoginEmailPlaceholder", comment: ""),
                                         text: $viewModel.email)
-                        CustomTextField(placeHolderText: "Password",
+                        CustomTextField(placeHolderText: NSLocalizedString("LoginPasswordPlaceholder", comment: ""),
                                         text: $viewModel.password,
                                         isPasswordType: true)
                     }.padding(.horizontal, 25)
                     
                     VStack(alignment: .center, spacing: 40) {
-                        customButton(title: "Log In",
+                        customButton(title: NSLocalizedString("LoginUpButton", comment: ""),
                                      backgroundColor: UIConfiguration.tintColor,
                                      action: { self.viewModel.login() })
                     }
@@ -42,31 +42,17 @@ struct Login: View {
             }
             Spacer()
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
         .alert(item: self.$viewModel.statusViewModel) { status in
             Alert(title: Text(status.title),
                   message: Text(status.message),
-                  dismissButton: .default(Text("OK"), action: {
+                  dismissButton: .default(Text(NSLocalizedString("LoginDialogAccept", comment: "")), action: {
                 if status.title == "Successful" {
                     self.pushActive = true
                 }
             }))
-        }
-        
-        
-        
-        
-    }
-    
-    private func customButton(title: String,
-                              backgroundColor: UIColor,
-                              action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Text(title)
-                .modifier(ButtonModifier(font: UIConfiguration.buttonFont,
-                                         color: backgroundColor,
-                                         textColor: .white,
-                                         width: 275,
-                                         height: 55))
         }
     }
 }

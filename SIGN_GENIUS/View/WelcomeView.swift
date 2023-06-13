@@ -18,7 +18,6 @@ struct WelcomeView: View {
                     Image(systemName: "waveform.circle")
                         .resizable()
                         .frame(width: 120, height: 120, alignment: .center)
-                        //.colorMultiply(Color(UIConfiguration.tintColor))
                         .foregroundColor(.yellow)
                         .padding(.top, 100)
                     
@@ -52,7 +51,16 @@ struct WelcomeView: View {
                                 .frame(width: 275, height: 55)
                                 .overlay(RoundedRectangle(cornerRadius: 25)
                                     .stroke(Color.gray, lineWidth: 1)
-                            )
+                                )
+                        }
+                        Button(action: {
+                            self.index = 3
+                            self.pushActive = true
+                        }) {
+                            Text("WelcomeViewResetPassword")
+                                .modifier(TextModifier(font: UIConfiguration.buttonFont,
+                                                       color: UIConfiguration.tintColor))
+                                .frame(width: 275, height: 55)
                         }
                     }
                 }
@@ -65,6 +73,10 @@ struct WelcomeView: View {
         switch index {
         case 1:
             return AnyView(Login(state: state))
+        case 2:
+            return AnyView(SignUpView(state: state))
+        case 3:
+            return AnyView(PasswordReset(state: state))
         default:
             return AnyView(SignUpView(state: state))
         }

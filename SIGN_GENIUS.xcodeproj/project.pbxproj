@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		500711442A2D2FD200CFF63B /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500711432A2D2FD200CFF63B /* DrawingBoundingBoxView.swift */; };
+		5031E2BE2A37F1360034DF83 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031E2BD2A37F1360034DF83 /* UIViewExt.swift */; };
+		5031E2C02A3867820034DF83 /* PasswordReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031E2BF2A3867820034DF83 /* PasswordReset.swift */; };
+		5031E2C22A3867E30034DF83 /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031E2C12A3867E30034DF83 /* PasswordResetViewModel.swift */; };
 		503E23122A140DA6000A4F67 /* handDectection.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 503E23102A140DA6000A4F67 /* handDectection.mlmodel */; };
 		503E23132A140DA6000A4F67 /* handClasification.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 503E23112A140DA6000A4F67 /* handClasification.mlmodel */; };
 		507B05AD2A1009610089188D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B05AC2A1009610089188D /* SplashView.swift */; };
@@ -43,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		500711432A2D2FD200CFF63B /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+		5031E2BD2A37F1360034DF83 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		5031E2BF2A3867820034DF83 /* PasswordReset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordReset.swift; sourceTree = "<group>"; };
+		5031E2C12A3867E30034DF83 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
 		503E23102A140DA6000A4F67 /* handDectection.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = handDectection.mlmodel; sourceTree = "<group>"; };
 		503E23112A140DA6000A4F67 /* handClasification.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = handClasification.mlmodel; sourceTree = "<group>"; };
 		507B05AC2A1009610089188D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -93,6 +99,7 @@
 		504FDECE29F9B99F00DD7E99 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5031E2C12A3867E30034DF83 /* PasswordResetViewModel.swift */,
 				509660472A10145E001D85D3 /* StatusViewModel.swift */,
 				509660492A10147F001D85D3 /* SignUpViewModel.swift */,
 				5096604B2A101491001D85D3 /* SignInViewModel.swift */,
@@ -105,6 +112,7 @@
 			children = (
 				507B05AC2A1009610089188D /* SplashView.swift */,
 				509660572A10ED48001D85D3 /* WelcomeView.swift */,
+				5031E2BF2A3867820034DF83 /* PasswordReset.swift */,
 				509660622A110270001D85D3 /* SignUpView.swift */,
 				509660642A1102A6001D85D3 /* Login.swift */,
 				509660662A1102E0001D85D3 /* MainView.swift */,
@@ -129,6 +137,7 @@
 				507B05AF2A1009B40089188D /* SwiftUIView.swift */,
 				5096603E2A101308001D85D3 /* AppState.swift */,
 				509660502A101704001D85D3 /* UIColorExt.swift */,
+				5031E2BD2A37F1360034DF83 /* UIViewExt.swift */,
 				5096605D2A10F00B001D85D3 /* Localizable.strings */,
 			);
 			path = Configuration;
@@ -231,6 +240,7 @@
 				5099249A29BDF2ED003D49F7 /* Sources */,
 				5099249B29BDF2ED003D49F7 /* Frameworks */,
 				5099249C29BDF2ED003D49F7 /* Resources */,
+				5031E2C42A38906B0034DF83 /* Firebase Crashlitycs */,
 			);
 			buildRules = (
 			);
@@ -300,12 +310,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5031E2C42A38906B0034DF83 /* Firebase Crashlitycs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			name = "Firebase Crashlitycs";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5099249A29BDF2ED003D49F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				509660482A10145E001D85D3 /* StatusViewModel.swift in Sources */,
+				5031E2BE2A37F1360034DF83 /* UIViewExt.swift in Sources */,
 				509660442A10139F001D85D3 /* AuthAPI.swift in Sources */,
 				500711442A2D2FD200CFF63B /* DrawingBoundingBoxView.swift in Sources */,
 				503E23132A140DA6000A4F67 /* handClasification.mlmodel in Sources */,
@@ -314,6 +348,7 @@
 				507B05AD2A1009610089188D /* SplashView.swift in Sources */,
 				5096604A2A10147F001D85D3 /* SignUpViewModel.swift in Sources */,
 				507B05B02A1009B40089188D /* SwiftUIView.swift in Sources */,
+				5031E2C22A3867E30034DF83 /* PasswordResetViewModel.swift in Sources */,
 				509660652A1102A6001D85D3 /* Login.swift in Sources */,
 				509660542A101B99001D85D3 /* CustomModifier.swift in Sources */,
 				50D58CC129CDFF0F00755B12 /* VideoCapture.swift in Sources */,
@@ -324,6 +359,7 @@
 				509660562A101BAE001D85D3 /* CustomTextField.swift in Sources */,
 				509924A229BDF2ED003D49F7 /* SignGeniusApp.swift in Sources */,
 				509660512A101704001D85D3 /* UIColorExt.swift in Sources */,
+				5031E2C02A3867820034DF83 /* PasswordReset.swift in Sources */,
 				508114392A2D0084003E3F07 /* MainViewController.swift in Sources */,
 				5096603F2A101308001D85D3 /* AppState.swift in Sources */,
 				509660462A1013AF001D85D3 /* AuthService.swift in Sources */,
@@ -477,6 +513,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"SIGN_GENIUS/Preview Content\"";
 				DEVELOPMENT_TEAM = R7GWR83FG9;
 				ENABLE_PREVIEWS = YES;

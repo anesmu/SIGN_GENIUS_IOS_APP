@@ -6,6 +6,8 @@ struct CustomTextField: View {
     private let isPasswordType: Bool
     private let placeHolderText: String
     
+    @State private var isPasswordShown: Bool = false
+    
     init(placeHolderText: String, text: Binding<String>, isPasswordType: Bool = false) {
         _text = text
         self.isPasswordType = isPasswordType
@@ -14,9 +16,22 @@ struct CustomTextField: View {
     var body: some View {
         VStack {
             if isPasswordType {
-                SecureField(placeHolderText, text: $text)
-                    .textFieldStyle(MyTextFieldStyle())
-                
+                ZStack(alignment: .trailing) {
+                    if isPasswordShown {
+                        TextField(placeHolderText, text: $text)
+                            .textFieldStyle(MyTextFieldStyle())
+                    } else {
+                        SecureField(placeHolderText, text: $text)
+                            .textFieldStyle(MyTextFieldStyle())
+                    }
+                    Button(action: {
+                        self.isPasswordShown.toggle()
+                    }) {
+                        Image(systemName: self.isPasswordShown ? "eye.slash.fill" : "eye.fill")
+                            .padding(.trailing, 15)
+                            .foregroundColor(.black)
+                    }
+                }
             } else {
                 TextField(placeHolderText, text: $text)
                     .textFieldStyle(MyTextFieldStyle())

@@ -11,6 +11,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     {
         didSet {
+            logoutButton.titleLabel?.text = NSLocalizedString("MainLogOutButton", comment: "")
             logoutButton.titleLabel?.font = UIConfiguration.buttonFont
             logoutButton.layer.borderWidth = 1
             logoutButton.layer.borderColor = UIColor.black.cgColor
@@ -21,6 +22,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var changeCamera: UIButton!
     {
         didSet {
+            changeCamera.titleLabel?.text = NSLocalizedString("MainRotateCameraButton", comment: "")
             changeCamera.titleLabel?.font = UIConfiguration.buttonFont
         }
     }
@@ -68,20 +70,20 @@ class MainViewController: UIViewController {
     
     // MARK: - Setup Core ML
     func setUpModel() {
-        guard let handDectectionModel = handDectectionModel else { fatalError("fail to load the model") }
+        guard let handDectectionModel = handDectectionModel else {
+            return
+        }
         if let visionModel = try? VNCoreMLModel(for: handDectectionModel.model) {
             self.handDectectionMLModel = visionModel
             handDectectionRequest = VNCoreMLRequest(model: visionModel, completionHandler: visionRequestDidComplete)
             handDectectionRequest?.imageCropAndScaleOption = .scaleFill
-        } else {
-            fatalError("fail to create vision model")
         }
         
-        guard let handClasificationModel = handClasificationModel else { fatalError("fail to load the handClasification model") }
+        guard let handClasificationModel = handClasificationModel else {
+            return
+        }
         if let visionModel = try? VNCoreMLModel(for: handClasificationModel.model) {
             self.handClasificationMLModel = visionModel
-        } else {
-            fatalError("fail to create vision model for handClasification")
         }
     }
 
@@ -240,7 +242,6 @@ extension MainViewController {
 
 extension MainViewController: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        print("Habló la frase: \(utterance)")
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) {_ in
             self.isSpeaking = false
         }

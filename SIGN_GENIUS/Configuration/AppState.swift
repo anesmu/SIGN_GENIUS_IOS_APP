@@ -4,19 +4,15 @@ import Combine
 
 class AppState: ObservableObject {
     @Published var didLogOut: Bool = false
-    @Published var currentUser: User?
-    
-    private var cancellable: AnyCancellable?
-    private let authService = AuthService.shared
+    var currentUser: User?
+    let authService = AuthService()
     
     init() {
-       /* cancellable = authService.addListener()
-            .sink(receiveCompletion: { _ in },
-                  receiveValue: { [weak self] user in
-                DispatchQueue.main.async {
-                    self?.currentUser = user
-                }
-            })*/
+        if let firebaseUser = Auth.auth().currentUser {
+            let id = firebaseUser.uid
+            let email = firebaseUser.email ?? ""
+            self.currentUser = User(id: id, email: email)
+        }
     }
     
     func logout() {

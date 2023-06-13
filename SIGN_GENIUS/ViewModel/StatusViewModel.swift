@@ -9,16 +9,20 @@ class StatusViewModel: Identifiable, ObservableObject {
         self.title = title
         self.message = message
     }
-    
+
     static var signUpSuccessStatus: StatusViewModel {
-        return StatusViewModel(title: "Successful", message: "Your account has been created successfully")
+        return StatusViewModel(title: NSLocalizedString("SignUpSuccessStatusTitle", comment: ""), message: NSLocalizedString("SignUpSuccessStatusMessage", comment: ""))
     }
     
     static var logInSuccessStatus: StatusViewModel {
-        return StatusViewModel(title: "Successful", message: "Your account has been logged in successfully")
+        return StatusViewModel(title: NSLocalizedString("LogInSuccessStatusTitle", comment: ""), message: NSLocalizedString("LogInSuccessStatusMessage", comment: ""))
+    }
+    
+    static var passwordResetSuccessStatus: StatusViewModel {
+        return StatusViewModel(title: NSLocalizedString("PasswordResetSuccessStatusTitle", comment: ""), message: NSLocalizedString("PasswordResetSuccessStatusMessage", comment: ""))
     }
     
     static var errorStatus: StatusViewModel {
-        return StatusViewModel(title: "Error", message: "Oops! Something went wrong. Please try again.")
+        return StatusViewModel(title: NSLocalizedString("ErrorStatusTitle", comment: ""), message: NSLocalizedString("ErrorStatussMessage", comment: ""))
     }
 }

@@ -5,7 +5,7 @@ struct SignUpView: View {
     @State var pushActive = false
     
     init(state: AppState) {
-        self.viewModel = SignUpViewModel(authAPI: AuthService.shared, state: state)
+        self.viewModel = SignUpViewModel(authAPI: AuthService(), state: state)
     }
     
     var body: some View {
@@ -17,26 +17,22 @@ struct SignUpView: View {
                 }.hidden()
                 VStack(alignment: .leading, spacing: 30) {
                     Spacer()
-                    Text("Sign Up")
+                    Text("SignUpTitle")
                         .modifier(TextModifier(font: UIConfiguration.titleFont,
                                                color: UIConfiguration.tintColor))
                         .padding(.leading, 25)
                     VStack(alignment: .center, spacing: 30) {
                         VStack(alignment: .center, spacing: 25) {
-                            CustomTextField(placeHolderText: "Full Name",
-                                            text: $viewModel.fullName)
-                            CustomTextField(placeHolderText: "Phone Number",
-                                            text: $viewModel.phoneNumber)
-                            CustomTextField(placeHolderText: "E-mail Address",
+                            CustomTextField(placeHolderText: NSLocalizedString("SignUpEmailPlaceholder", comment: ""),
                                             text: $viewModel.email)
-                            CustomTextField(placeHolderText: "Password",
+                            CustomTextField(placeHolderText: NSLocalizedString("SignUpPasswordPlaceholder", comment: ""),
                                             text: $viewModel.password,
                                             isPasswordType: true)
                         }.padding(.horizontal, 25)
                         
                         VStack(alignment: .center, spacing: 40) {
-                            customButton(title: "Create Account",
-                                         backgroundColor: UIColor(hexString: "#334D92"),
+                            customButton(title: NSLocalizedString("SignUpButton", comment: ""),
+                                         backgroundColor: UIConfiguration.tintColor,
                                          action: self.viewModel.signUp)
                         }
                     }
@@ -45,21 +41,8 @@ struct SignUpView: View {
             }.alert(item: self.$viewModel.statusViewModel) { status in
                 Alert(title: Text(status.title),
                       message: Text(status.message),
-                      dismissButton: .default(Text("OK"), action: { self.pushActive = true }))
+                      dismissButton: .default(Text(NSLocalizedString("SignUpDialogAccept", comment: "")), action: { self.pushActive = true }))
             }
-        }
-    }
-    
-    private func customButton(title: String,
-                              backgroundColor: UIColor,
-                              action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Text(title)
-                .modifier(ButtonModifier(font: UIConfiguration.buttonFont,
-                                         color: backgroundColor,
-                                         textColor: .white,
-                                         width: 275,
-                                         height: 45))
         }
     }
 }
