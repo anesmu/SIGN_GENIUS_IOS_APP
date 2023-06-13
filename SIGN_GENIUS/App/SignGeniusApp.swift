@@ -14,7 +14,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct SignGeniusApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    //@StateObject var dataManager = DataManager()
     var body: some Scene {
         WindowGroup {
             SplashView(state: AppState())

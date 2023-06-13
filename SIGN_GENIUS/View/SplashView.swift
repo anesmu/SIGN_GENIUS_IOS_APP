@@ -6,7 +6,9 @@ struct SplashView: View {
     
     var body: some View {
         VStack {
-            if self.isActive {
+            if self.state.currentUser != nil {
+                MainView(state: state)
+            } else if self.isActive {
                 WelcomeView(state: state)
             } else {
                 ZStack {
@@ -29,6 +31,17 @@ struct SplashView: View {
                 withAnimation {
                     self.isActive = true
                 }
+            }
+        }
+        .onReceive(state.$didLogOut) { didLogOut in
+            if didLogOut {
+                self.isActive = false
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    withAnimation {
+                        self.isActive = true
+                    }
+                }
+                self.state.didLogOut = false
             }
         }
     }

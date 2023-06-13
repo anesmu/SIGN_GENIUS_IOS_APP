@@ -148,54 +148,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "682A0778-2DF3-46B4-8253-389591BD18CE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SIGN_GENIUS/Utils/VideoCapture.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "setUpCamera(sessionPreset:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "682A0778-2DF3-46B4-8253-389591BD18CE - c25506b875078488"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SIGN_GENIUS.VideoCapture.setUpCamera(sessionPreset: __C.AVCaptureSessionPreset, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "SIGN_GENIUS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/Utils/VideoCapture.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  uuid = "682A0778-2DF3-46B4-8253-389591BD18CE - c25506b875078488"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SIGN_GENIUS.VideoCapture.setUpCamera(sessionPreset: __C.AVCaptureSessionPreset, completion: (Swift.Bool) -&gt; ()) -&gt; ()"
-                  moduleName = "SIGN_GENIUS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/Utils/VideoCapture.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "224">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "7A811DB5-E37B-44A8-A9DE-6042562826A9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -253,7 +205,53 @@
                   endingLineNumber = "96"
                   offsetFromSymbolStart = "68">
                </Location>
+               <Location
+                  uuid = "7A811DB5-E37B-44A8-A9DE-6042562826A9 - 46c23f229dfc29d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SIGN_GENIUS.VideoCapture.switchCamera(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/Utils/VideoCapture.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "7A811DB5-E37B-44A8-A9DE-6042562826A9 - 142c985d5702b0a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool) -&gt; () in SIGN_GENIUS.VideoCapture.switchCamera(completion: (Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "SIGN_GENIUS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anesmu/Desktop/TFG/SIGN_GENIUS/SIGN_GENIUS/Utils/VideoCapture.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "68">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "085EACAE-36A8-4C9E-8CC9-E01F9032D6C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SIGN_GENIUS/View/SplashView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

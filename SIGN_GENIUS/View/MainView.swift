@@ -7,8 +7,10 @@ struct MainView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
         let storyboard = UIStoryboard(name: "MainViewController", bundle: Bundle.main)
         let controller = storyboard.instantiateViewController(identifier: "MainViewController") as! MainViewController
-        controller.logoutAction = { self.presentationMode.wrappedValue.dismiss() }
-
+        controller.logoutAction = {
+            self.state.logout()
+        }
+        
         return controller
     }
     

@@ -7,7 +7,7 @@ struct Login: View {
     @ObservedObject private var viewModel: SignInViewModel
     
     init(state: AppState) {
-        self.viewModel = SignInViewModel(authAPI: AuthService(), state: state)
+        self.viewModel = SignInViewModel(authAPI: AuthService.shared, state: state)
     }
     
     var body: some View {

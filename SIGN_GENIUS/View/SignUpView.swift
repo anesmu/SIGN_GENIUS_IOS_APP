@@ -5,7 +5,7 @@ struct SignUpView: View {
     @State var pushActive = false
     
     init(state: AppState) {
-        self.viewModel = SignUpViewModel(authAPI: AuthService(), state: state)
+        self.viewModel = SignUpViewModel(authAPI: AuthService.shared, state: state)
     }
     
     var body: some View {
