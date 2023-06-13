@@ -49,7 +49,7 @@ struct Login: View {
             Alert(title: Text(status.title),
                   message: Text(status.message),
                   dismissButton: .default(Text(NSLocalizedString("LoginDialogAccept", comment: "")), action: {
-                if status.title == "Successful" {
+                if status.title == NSLocalizedString("LogInSuccessStatusTitle", comment: "") {
                     self.pushActive = true
                 }
             }))

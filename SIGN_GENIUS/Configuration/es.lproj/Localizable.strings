@@ -4,7 +4,7 @@
 "WelcomeViewLogin" = "Entrar";
 "WelcomeViewRegister" = "Registro";
 "WelcomeViewResetPassword" = "¿Has olvidado tu contraseña?";
-"PasswordResetTitle" = "Recuperación de la cuenta";
+"PasswordResetTitle" = "Restablecer contraseña";
 "PasswordResetEmailPlaceholder" = "Correo electrónico";
 "PasswordResetButton" = "Restablecer contraseña";
 "PasswordResetDialogAccept" = "Vale";
@@ -16,7 +16,7 @@
 "LoginTitle" = "Inicio de sesión";
 "LoginEmailPlaceholder" = "Correo electrónico";
 "LoginPasswordPlaceholder" = "Contraseña";
-"LoginUpButton" = "Crear cuenta";
+"LoginUpButton" = "Entrar";
 "LoginDialogAccept" = "Vale";
 "MainLogOutButton" = "Cerrar sesión";
 "MainRotateCameraButton" = "Girar cámara";
