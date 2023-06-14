@@ -20,7 +20,7 @@
 ### Installation
 1. Clone the repository
 
-    ``` https://github.com/anesmu/SIGN_GENIUS_IOS_APP.git ```
+    ``` git clone https://github.com/anesmu/SIGN_GENIUS_IOS_APP.git ```
     
 2. Open the `.xcodeproj` file in Xcode
 
