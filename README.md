@@ -28,4 +28,4 @@
 We'd love to have your help in making **Sign genius** better. If you have a bug you'd like to report, or a feature you'd like to request, feel free to open an issue or submit a pull request.
 
 ## Contact
-- ** Antonio Espino Muñoz ** - email@example.com
+- **Antonio Espino Muñoz** - email@example.com
