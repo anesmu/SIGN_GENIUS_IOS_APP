@@ -19,9 +19,13 @@
 
 ### Installation
 1. Clone the repository
+
     ``` https://github.com/anesmu/SIGN_GENIUS_IOS_APP.git ```
+    
 2. Open the `.xcodeproj` file in Xcode
+
     ```open SIGN_GENIUS.xcodeproj```
+    
 3. Compile and run the application on your device or in the emulator.
 
 ## Contributing
