@@ -11,23 +11,25 @@ class MainViewController: UIViewController {
     @IBOutlet weak var logoutButton: UIButton!
     {
         didSet {
-            logoutButton.titleLabel?.text = NSLocalizedString("MainLogOutButton", comment: "")
             logoutButton.titleLabel?.font = UIConfiguration.buttonFont
             logoutButton.layer.borderWidth = 1
             logoutButton.layer.borderColor = UIColor.black.cgColor
             logoutButton.layer.cornerRadius = logoutButton.frame.height / 2
             logoutButton.clipsToBounds = true
+            logoutButton.setTitle(NSLocalizedString("MainLogOutButton", comment: ""), for: .normal)
         }
     }
     @IBOutlet weak var changeCamera: UIButton!
     {
         didSet {
-            changeCamera.titleLabel?.text = NSLocalizedString("MainRotateCameraButton", comment: "")
             changeCamera.titleLabel?.font = UIConfiguration.buttonFont
+            changeCamera.layer.cornerRadius = changeCamera.frame.height / 2
+            changeCamera.clipsToBounds = true
+            changeCamera.setTitle(NSLocalizedString("MainRotateCameraButton", comment: ""), for: .normal)
         }
     }
     lazy var handDectectionModel = { return try? handDectection() }()
-    lazy var handClasificationModel = { return try? handClasification() }()
+    lazy var handClasifierModel = { return try? handClasification() }()
     
     // MARK: - Vision Properties
     var handDectectionRequest: VNCoreMLRequest?
@@ -79,7 +81,7 @@ class MainViewController: UIViewController {
             handDectectionRequest?.imageCropAndScaleOption = .scaleFill
         }
         
-        guard let handClasificationModel = handClasificationModel else {
+        guard let handClasificationModel = handClasifierModel else {
             return
         }
         if let visionModel = try? VNCoreMLModel(for: handClasificationModel.model) {
@@ -148,7 +150,9 @@ extension MainViewController: VideoCaptureDelegate {
 
 extension MainViewController {
     func predictUsingVision(pixelBuffer: CVPixelBuffer) {
-        guard let request = handDectectionRequest else { fatalError() }
+        guard let request = handDectectionRequest else {
+            return
+        }
         self.semaphore.wait()
         let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer)
         try? handler.perform([request])
@@ -157,17 +161,21 @@ extension MainViewController {
     // MARK: - Post-processing
     func visionRequestDidComplete(request: VNRequest, error: Error?) {
         if let predictions = request.results as? [VNRecognizedObjectObservation] {
+            let highConfidencePredictions = predictions.filter({ $0.confidence > 0.6 })
             DispatchQueue.main.async {
-                self.boxesView.predictedObjects = predictions
+                self.boxesView.predictedObjects = highConfidencePredictions
             }
-            processPredictions(predictions: predictions)
-
+            if !highConfidencePredictions.isEmpty {
+                processPredictions(predictions: highConfidencePredictions)
+            }
         }
         self.semaphore.signal()
     }
     
     func processPredictions(predictions: [VNRecognizedObjectObservation]) {
-        guard let handClasificationModel = handClasificationModel else { fatalError("fail to load the handClasification model") }
+        guard let handClasificationModel = handClasifierModel else {
+            return
+        }
         
         for prediction in predictions {
             guard let pixelBuffer = videoCapture.currentPixelBuffer else {
@@ -181,7 +189,7 @@ extension MainViewController {
                      print("Class: \(result.identifier), Confidence: \(result.confidence)")
                      }
                     DispatchQueue.main.async {
-                        if !self.isSpeaking {
+                        if !self.isSpeaking && topResult.confidence > 0.5 {
                             self.isSpeaking = true
                             self.speak(text: topResult.identifier)
                         }

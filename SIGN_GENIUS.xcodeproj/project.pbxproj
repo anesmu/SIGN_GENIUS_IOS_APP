@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		500711442A2D2FD200CFF63B /* DrawingBoundingBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500711432A2D2FD200CFF63B /* DrawingBoundingBoxView.swift */; };
+		50174AF92A3B017100532A50 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50174AF82A3B017100532A50 /* MainViewController.storyboard */; };
 		5031E2BE2A37F1360034DF83 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031E2BD2A37F1360034DF83 /* UIViewExt.swift */; };
 		5031E2C02A3867820034DF83 /* PasswordReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031E2BF2A3867820034DF83 /* PasswordReset.swift */; };
 		5031E2C22A3867E30034DF83 /* PasswordResetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5031E2C12A3867E30034DF83 /* PasswordResetViewModel.swift */; };
@@ -16,7 +17,6 @@
 		507B05AD2A1009610089188D /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B05AC2A1009610089188D /* SplashView.swift */; };
 		507B05B02A1009B40089188D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507B05AF2A1009B40089188D /* SwiftUIView.swift */; };
 		508114392A2D0084003E3F07 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508114382A2D0084003E3F07 /* MainViewController.swift */; };
-		5081143C2A2D01CD003E3F07 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5081143A2A2D01CD003E3F07 /* MainViewController.storyboard */; };
 		5096603F2A101308001D85D3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5096603E2A101308001D85D3 /* AppState.swift */; };
 		509660412A101325001D85D3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660402A101325001D85D3 /* User.swift */; };
 		509660442A10139F001D85D3 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509660432A10139F001D85D3 /* AuthAPI.swift */; };
@@ -46,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		500711432A2D2FD200CFF63B /* DrawingBoundingBoxView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingBoundingBoxView.swift; sourceTree = "<group>"; };
+		50174AF82A3B017100532A50 /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
 		5031E2BD2A37F1360034DF83 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		5031E2BF2A3867820034DF83 /* PasswordReset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordReset.swift; sourceTree = "<group>"; };
 		5031E2C12A3867E30034DF83 /* PasswordResetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewModel.swift; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		507B05AC2A1009610089188D /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		507B05AF2A1009B40089188D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		508114382A2D0084003E3F07 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		5081143B2A2D01CD003E3F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../../Pro_recognizer/ObjectDetection-CoreML/Base.lproj/MainViewController.storyboard"; sourceTree = "<group>"; };
 		5096603E2A101308001D85D3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		509660402A101325001D85D3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		509660432A10139F001D85D3 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 				509660642A1102A6001D85D3 /* Login.swift */,
 				509660662A1102E0001D85D3 /* MainView.swift */,
 				508114382A2D0084003E3F07 /* MainViewController.swift */,
-				5081143A2A2D01CD003E3F07 /* MainViewController.storyboard */,
+				50174AF82A3B017100532A50 /* MainViewController.storyboard */,
 				500711432A2D2FD200CFF63B /* DrawingBoundingBoxView.swift */,
 			);
 			path = View;
@@ -300,8 +300,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50174AF92A3B017100532A50 /* MainViewController.storyboard in Resources */,
 				509924A629BDF2EE003D49F7 /* Assets.xcassets in Resources */,
-				5081143C2A2D01CD003E3F07 /* MainViewController.storyboard in Resources */,
 				5096605B2A10F00B001D85D3 /* Localizable.strings in Resources */,
 				5096604F2A1015F7001D85D3 /* Preview Assets.xcassets in Resources */,
 				509924CC29BDFF8B003D49F7 /* GoogleService-Info.plist in Resources */,
@@ -369,14 +369,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5081143A2A2D01CD003E3F07 /* MainViewController.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5081143B2A2D01CD003E3F07 /* Base */,
-			);
-			name = MainViewController.storyboard;
-			sourceTree = "<group>";
-		};
 		5096605D2A10F00B001D85D3 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

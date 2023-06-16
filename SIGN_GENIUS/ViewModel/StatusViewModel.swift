@@ -23,6 +23,6 @@ class StatusViewModel: Identifiable, ObservableObject {
     }
     
     static var errorStatus: StatusViewModel {
-        return StatusViewModel(title: NSLocalizedString("ErrorStatusTitle", comment: ""), message: NSLocalizedString("ErrorStatussMessage", comment: ""))
+        return StatusViewModel(title: NSLocalizedString("ErrorStatusTitle", comment: ""), message: NSLocalizedString("ErrorStatusMessage", comment: ""))
     }
 }

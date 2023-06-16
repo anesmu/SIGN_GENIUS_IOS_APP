@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="DJ8-sD-nEg">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="cPm-Lz-1Gc" customClass="MainViewController" customModule="SIGN_GENIUS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dUy-5g-RCT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mee-5L-A0B">
+                                <rect key="frame" x="0.0" y="59" width="393" height="524"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mee-5L-A0B" secondAttribute="height" multiplier="3:4" id="lT6-To-vu6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="da0-cy-KTs" customClass="DrawingBoundingBoxView" customModule="SIGN_GENIUS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="524"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="da0-cy-KTs" secondAttribute="height" multiplier="3:4" id="QfV-xM-W4a"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UrA-im-6tm">
+                                <rect key="frame" x="16" y="599" width="361" height="203"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfo-qo-6ql">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="132"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <color key="textColor" name="LaunchScreenBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="D3F-nd-zci">
+                                        <rect key="frame" x="0.0" y="148" width="361" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXg-b7-lhA">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.66666666666666" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="S0t-8v-zXP"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="logoutButtonTapped:" destination="cPm-Lz-1Gc" eventType="touchUpInside" id="rIQ-hY-bNl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgH-jO-aVP">
+                                                <rect key="frame" x="188.66666666666663" y="0.0" width="172.33333333333337" height="55"/>
+                                                <color key="backgroundColor" name="LaunchScreenBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="9t4-LT-Ihi"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="capsule">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="changeCamera:" destination="cPm-Lz-1Gc" eventType="touchUpInside" id="yqn-l4-wiq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JiL-Hu-ZL9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JiL-Hu-ZL9" firstAttribute="bottom" secondItem="UrA-im-6tm" secondAttribute="bottom" constant="16" id="0R3-bi-1dY"/>
+                            <constraint firstItem="JiL-Hu-ZL9" firstAttribute="trailing" secondItem="da0-cy-KTs" secondAttribute="trailing" id="1Ma-iQ-lfw"/>
+                            <constraint firstItem="da0-cy-KTs" firstAttribute="leading" secondItem="JiL-Hu-ZL9" secondAttribute="leading" id="4Yf-DM-VII"/>
+                            <constraint firstItem="mee-5L-A0B" firstAttribute="top" secondItem="JiL-Hu-ZL9" secondAttribute="top" id="5nG-tA-2Ct"/>
+                            <constraint firstItem="UrA-im-6tm" firstAttribute="top" secondItem="mee-5L-A0B" secondAttribute="bottom" constant="16" id="Nqh-O1-prs"/>
+                            <constraint firstItem="JiL-Hu-ZL9" firstAttribute="trailing" secondItem="mee-5L-A0B" secondAttribute="trailing" id="ddT-0A-oUF"/>
+                            <constraint firstItem="UrA-im-6tm" firstAttribute="leading" secondItem="JiL-Hu-ZL9" secondAttribute="leading" constant="16" id="emq-io-y8h"/>
+                            <constraint firstItem="JiL-Hu-ZL9" firstAttribute="trailing" secondItem="UrA-im-6tm" secondAttribute="trailing" constant="16" id="iDl-hD-B0f"/>
+                            <constraint firstItem="mee-5L-A0B" firstAttribute="leading" secondItem="JiL-Hu-ZL9" secondAttribute="leading" id="nyz-qS-pgL"/>
+                            <constraint firstItem="da0-cy-KTs" firstAttribute="top" secondItem="JiL-Hu-ZL9" secondAttribute="top" id="tsK-kh-sYp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="boxesView" destination="da0-cy-KTs" id="iAI-zj-Hew"/>
+                        <outlet property="changeCamera" destination="NgH-jO-aVP" id="i1w-Y8-gA7"/>
+                        <outlet property="logoutButton" destination="XXg-b7-lhA" id="rUR-MH-Q8L"/>
+                        <outlet property="predictionLabel" destination="pfo-qo-6ql" id="QKh-xg-1oa"/>
+                        <outlet property="videoPreview" destination="mee-5L-A0B" id="N8w-V0-GRs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gf-dy-sEc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-193" y="-702"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LaunchScreenBackgroundColor">
+            <color red="1" green="0.3529999852180481" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

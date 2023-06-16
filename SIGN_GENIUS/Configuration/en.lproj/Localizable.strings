@@ -27,4 +27,4 @@
 "PasswordResetSuccessStatusTitle" = "Successful";
 "PasswordResetSuccessStatusMessage" = "Your recived a email";
 "ErrorStatusTitle" = "Error";
-"ErrorStatussMessage" = "Oops! Something went wrong. Please try again.";
+"ErrorStatusMessage" = "Oops! Something went wrong. Please try again.";
