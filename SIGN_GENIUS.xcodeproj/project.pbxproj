@@ -512,6 +512,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SIGN-GENIUS-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Sign Genius";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Es necesario el uso de la cámara para poder usar la aplicación";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashView;
@@ -547,6 +548,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "SIGN-GENIUS-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Sign Genius";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Es necesario el uso de la cámara para poder usar la aplicación";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = SplashView;

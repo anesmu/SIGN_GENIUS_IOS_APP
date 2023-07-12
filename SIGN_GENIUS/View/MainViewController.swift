@@ -164,9 +164,9 @@ extension MainViewController {
             let highConfidencePredictions = predictions.filter({ $0.confidence > 0.6 })
             DispatchQueue.main.async {
                 self.boxesView.predictedObjects = highConfidencePredictions
-            }
-            if !highConfidencePredictions.isEmpty {
-                processPredictions(predictions: highConfidencePredictions)
+                if !highConfidencePredictions.isEmpty {
+                    self.processPredictions(predictions: highConfidencePredictions)
+                }
             }
         }
         self.semaphore.signal()
@@ -219,32 +219,47 @@ extension MainViewController {
         }
     }
     
+    private func convert(pixelBuffer: CVPixelBuffer) -> UIImage? {
+        let ciImage = CIImage(cvPixelBuffer: pixelBuffer)
+        let context = CIContext(options: nil)
+        guard let cgImage = context.createCGImage(ciImage, from: ciImage.extent) else { return nil }
+        
+        return UIImage(cgImage: cgImage)
+    }
+    
     func cropPixelBuffer(_ pixelBuffer: CVPixelBuffer, _ boundingBox: CGRect) -> CVPixelBuffer {
         let ciImage = CIImage(cvPixelBuffer: pixelBuffer)
+        
+        let imageSize = CGSize(width: CVPixelBufferGetWidth(pixelBuffer), height: CVPixelBufferGetHeight(pixelBuffer))
+        
+        // Transform the bounding box
+        let transform = CGAffineTransform(scaleX: imageSize.width, y: imageSize.height)
+        var transformedRect = boundingBox.applying(transform)
 
-         let imageSize = CGSize(width: CVPixelBufferGetWidth(pixelBuffer), height: CVPixelBufferGetHeight(pixelBuffer))
+        let expansionRatio: CGFloat = 0.4
+        transformedRect = transformedRect.insetBy(dx: -transformedRect.width * expansionRatio, dy: -transformedRect.height * expansionRatio)
 
-         let topLeft = CGPoint(x: boundingBox.origin.x * imageSize.width, y: (1 - boundingBox.origin.y - boundingBox.size.height) * imageSize.height)
-         let bottomRight = CGPoint(x: (boundingBox.origin.x + boundingBox.size.width) * imageSize.width, y: (1 - boundingBox.origin.y) * imageSize.height)
-         let croppedRect = CGRect(x: topLeft.x, y: topLeft.y, width: bottomRight.x - topLeft.x, height: bottomRight.y - topLeft.y)
+        transformedRect = transformedRect.intersection(CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
 
-         let croppedImage = ciImage.cropped(to: croppedRect)
-
-         let context = CIContext()
-         var croppedPixelBuffer: CVPixelBuffer?
-         let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(croppedRect.width), Int(croppedRect.height), kCVPixelFormatType_32BGRA, nil, &croppedPixelBuffer)
-
-         if status != kCVReturnSuccess {
-             fatalError("Error: Could not create cropped CVPixelBuffer.")
-         }
-
-         if let croppedPixelBuffer = croppedPixelBuffer {
-             context.render(croppedImage, to: croppedPixelBuffer)
-         } else {
-             fatalError("Error: Cropped pixel buffer is nil.")
-         }
-
-         return croppedPixelBuffer!
+        let croppedImage = ciImage.cropped(to: transformedRect)
+        
+        let context = CIContext()
+        var croppedPixelBuffer: CVPixelBuffer?
+        let status = CVPixelBufferCreate(kCFAllocatorDefault, Int(transformedRect.width), Int(transformedRect.height), kCVPixelFormatType_32BGRA, nil, &croppedPixelBuffer)
+        
+        if status != kCVReturnSuccess {
+            fatalError("Error: Could not create cropped CVPixelBuffer.")
+        }
+        
+        if let croppedPixelBuffer = croppedPixelBuffer {
+            context.render(croppedImage, to: croppedPixelBuffer)
+            let image = convert(pixelBuffer: croppedPixelBuffer)
+            print(image!)
+        } else {
+            fatalError("Error: Cropped pixel buffer is nil.")
+        }
+        
+        return croppedPixelBuffer!
     }
 }
 
