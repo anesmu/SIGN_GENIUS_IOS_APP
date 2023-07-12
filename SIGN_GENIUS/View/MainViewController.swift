@@ -232,7 +232,6 @@ extension MainViewController {
         
         let imageSize = CGSize(width: CVPixelBufferGetWidth(pixelBuffer), height: CVPixelBufferGetHeight(pixelBuffer))
         
-        // Transform the bounding box
         let transform = CGAffineTransform(scaleX: imageSize.width, y: imageSize.height)
         var transformedRect = boundingBox.applying(transform)
 
